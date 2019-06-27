@@ -1,0 +1,21 @@
+{
+  "name": "nodejs-aws-lambda-travisci",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "node scripts/aws-lambda-deploy.js",
+    "test": "jest --coverage"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "aws-sdk": "^2.7.28"
+  },
+  "dependencies": {
+    "jest": "^24.8.0"
+  },
+  "aws": {
+    "region": "ap-northeast-1"
+  }
+}
