@@ -3,10 +3,10 @@ node_js:
   - '10.0.0'
 after_install:
 after_success:
-  - npm run test
+  - yarn  test
 deploy:
   - provider: script
-    script: npm deploy
+    script: yarn  deploy
     skip_cleanup: true
     on:
       branch: master
