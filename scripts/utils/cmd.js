@@ -1,7 +1,7 @@
 const childProcess = require('child_process');
 
-const execCommand = (cmdString) => new Promise((resolve, reject)=> {
-  childProcess.exec(cmdString, (error, stdout, stderr) => {
+const execCommand = (cmdString, options = {}) => new Promise((resolve, reject)=> {
+  childProcess.exec(cmdString, options, (error, stdout, stderr) => {
     if (error) return reject(error)
     if (stderr) return resolve(stderr)
 

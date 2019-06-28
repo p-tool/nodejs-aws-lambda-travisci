@@ -2,11 +2,12 @@ language: node_js
 node_js:
   - '10.0.0'
 after_install:
+  - node scripts/install-nested-dir.js 
 after_success:
   - yarn  test
 deploy:
   - provider: script
-    script: yarn  deploy
+    script: yarn deploy
     skip_cleanup: true
     on:
       branch: master
